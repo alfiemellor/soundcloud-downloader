@@ -1,25 +1,5 @@
 #!/bin/bash
 
-# Script to download tracks/playlists/albums from Soundcloud using youtube-dl.
-# It requires setting 'sc_oauth' variable to your Soundcloud oauth token, if
-# you wish to download in high quality (Soundcloud Go+ account needed).
-# Before using the script make sure both youtube-dl is installed, as well as
-# ffmpeg and eyeD3. Recommended install methods are (for mac):
-# 'brew install youtube-dl'
-# 'brew install ffmpeg'
-# 'pip3 install eyeD3'
-# 
-# To use the script simply make sure it is executable by running:
-# 'chmod +x soundcloud-downloader.sh'
-# and then running it whilst passing in a valid Souncloud link, like so:
-# './soundcloud-downloader.sh https://soundcloud.com/taapionrecords/sarai'
-#
-# The script converts the high quality 256 AAC file Soundcloud provides into
-# a 320 MP3 file. Because it is a lossy > lossy transcode there is mild loss
-# of quality however the resulting file is still greater than the normal 128
-# MP3 file that Soundcloud regularly streams out and as a result what other
-# downloaders will provide.
-
 sc_oauth=("Authorization:OAuth ")
 dl="$1"
 
